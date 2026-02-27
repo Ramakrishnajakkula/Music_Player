@@ -5,12 +5,12 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#0D0D1A"
     },
     "ios": {
       "supportsTablet": true
@@ -18,13 +18,39 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#0D0D1A"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.soundwave.musicplayer",
+      "permissions": [
+        "INTERNET",
+        "WAKE_LOCK",
+        "FOREGROUND_SERVICE",
+        "RECEIVE_BOOT_COMPLETED",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
     },
+    "plugins": [
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false,
+          "android": {
+            "enforcesSecureDefaults": false
+          }
+        }
+      ]
+    ],
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d15233f7-76e8-4b28-b0bf-1ccf9a24660a"
+      }
+    },
+    "owner": "ramakrishna_jk"
   }
 }
